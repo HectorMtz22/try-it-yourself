@@ -1,10 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import LoginForm from "./src/components/LoginForm";
+import Saludar from "./src/components/Saludar";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hola Mundo!</Text>
+      <LoginForm />
+      <Saludar firstName={"Hector"} lastName="Chido" />
+      <Saludar />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
