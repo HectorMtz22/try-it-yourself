@@ -1,10 +1,12 @@
-import { SafeAreaView, Text } from "react-native";
-import React from "react";
+import { View, Text } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import globalStyles from "./globalStyles";
 
 export default function SettingsScreen() {
+  const insets = useSafeAreaInsets();
   return (
-    <SafeAreaView>
+    <View style={globalStyles(insets).container}>
       <Text>SettingsScreen</Text>
-    </SafeAreaView>
+    </View>
   );
 }
